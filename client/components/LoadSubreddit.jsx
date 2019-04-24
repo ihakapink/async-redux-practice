@@ -14,11 +14,15 @@ handleChange = (e) => {
 }
 
 render () {
+  const { fetchPosts, children } = this.props
+
   return (
+
     <React.Fragment>
       <input subReddit="" onChange={this.handleChange} value={this.state.subReddit} />
 
-      <button onClick={() => dispatchEvent(fetchPosts(this.subReddit))}>Go to subreddit</button>
+      <button onClick={() => dispatchEvent(this.fetchPosts(this.subReddit))}>Go to subreddit</button>
+      {children}
     </React.Fragment>
   )
 }
