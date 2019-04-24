@@ -15,13 +15,11 @@ handleChange = (e) => {
 
 render () {
   return (
-    <form onChange={this.handleSubmit}>
-      <label>
-      Subreddit:
-        <input type="text" value={this.state.value} onChange={this.handle} />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
+    <React.Fragment>
+      <input subReddit="" onChange={this.handleChange} value={this.state.subReddit} />
+
+      <button onClick={this.handleChange}>Go to subreddit</button>
+    </React.Fragment>
   )
 }
 }
