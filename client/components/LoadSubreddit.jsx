@@ -18,7 +18,7 @@ render () {
     <React.Fragment>
       <input subReddit="" onChange={this.handleChange} value={this.state.subReddit} />
 
-      <button onClick={this.handleChange}>Go to subreddit</button>
+      <button onClick={() => dispatchEvent(fetchPosts(this.subReddit))}>Go to subreddit</button>
     </React.Fragment>
   )
 }
